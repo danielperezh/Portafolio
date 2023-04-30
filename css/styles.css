@@ -7,7 +7,7 @@ html{
     display: block;
 }
 .body {
-    position: relative;
+    /* position: relative; */
     background-color: #93C7E1;
     font-family: 'Poppins', sans-serif;
 }
@@ -158,6 +158,10 @@ a {
     margin-top: 4rem!important;
     padding-top: 4rem!important;
 }
+
+.me {
+    border-radius: 50%;
+}
 .mdi-chevron-double-up {
     background: #3881A6;
     cursor: pointer;
@@ -224,7 +228,7 @@ footer .footnote {
     justify-content: center;
 }
 .highlight {
-    color: #4195BF;
+    color: #28fabb;
 }
 
 .header {
@@ -580,8 +584,8 @@ section .flex-50-gt-sm {
     top: 0;
     right: -100%;
     position: absolute;
-    background: #1f3d4738;
-    backdrop-filter: blur(5px);
+    background: #1c2533d5;
+    backdrop-filter: blur(10px);
     color: #fff;
     padding: 30px;
     display: flex;
@@ -600,17 +604,34 @@ section .flex-50-gt-sm {
     margin-top: 40px;
 }
 .card-btn {
-    color: #1f3d47;
-    background: #8fabba;
+    display: flex;
+    /* color: #1f3d47;
+    background: #8fabba; */
     /* padding: 10px 20px; */
-    border-radius: 5px;
-    width: 120px;
+    width: 225px;
     text-transform: capitalize;
-    border: none;
-    outline: none;
+    /* border: none; */
+    /* outline: none; */
+    justify-content: space-between;
     font-weight: 500;
-    cursor: pointer;
+    /* cursor: pointer; */
     margin: 0 auto;
+}
+.boton {
+    width: 100px;
+    line-height: 2.5;
+    text-align: center;
+    color: #28fabb;
+    background: #0a2427;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    border: 2px #28fabb;
+}
+.boton:hover {
+    color: #fff;
+    background-color: #1f3d47;
+    border-color: #8fabba;
 }
 .card:hover .card-body2{
     right: 0;
@@ -618,36 +639,63 @@ section .flex-50-gt-sm {
 
 /* grande */
 @media (min-width: 576px){
-    .card-body2 h4{
+    .card-body2 .card-title{
         font-size: 1.8em;
-        margin-bottom: 10vw;
-        }
-        .card-body2 p{
+    }
+    .card-body2 span{
+        margin-bottom: 8vw;
+    }
+    .card-body2 p{
         font-size: 1em;
-        }
+    }
 }
 
 /* mediana */
 @media (min-width: 768px){
-    .card-body2 h4{
+    .card-body2 .card-title{
     font-size: 2.5em;
-    margin-bottom: 12vw;
     }
     .card-body2 p{
     font-size: 1.5em;
-    } 
+    }
+    .card-body2 span{
+    margin-bottom: 10vw;
+    }
 }
 /* mini */
 @media (min-width: 992px){
-    .card-body2 h4{
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    .card-body2 .card-title{
+    font-size: 1em;
+    margin-block-end: 2%;
+    
     }
-    .card-body2 p{
-    font-size: 0.8em;
+    .card-body2 span{
+    margin-bottom: 30px;
+    }
+    .card-body2 .card-text{
+     font-size: 15px;
     } 
 }
-
+@media (min-width: 1100px){
+    .card-body2 .card-title{
+    font-size: 1em;
+    padding-top: 5px;
+    margin-block-end: 2%;
+    
+    }
+    .card-body2 span{
+         margin-bottom: 40px;
+    }
+    .card-body2 .card-text{
+        margin-block-start: 0%;
+        font-size: 12px;
+    }
+    .boton{
+        width: 98px;
+        margin: 0 auto;
+        margin-bottom: 8px;
+    } 
+}
 
 
 .slider {
