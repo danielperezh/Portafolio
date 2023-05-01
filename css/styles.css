@@ -8,8 +8,9 @@ html{
 }
 .body {
     /* position: relative; */
-    background-color: #93C7E1;
+    background-color: #70a1b9;
     font-family: 'Poppins', sans-serif;
+    font-size: 8pt;
 }
 #particles-js{
     position: fixed;
@@ -28,7 +29,7 @@ html{
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    background-image: url('../assets/images/heroImage.jpeg');
+    background-image: linear-gradient( 115deg, rgba(28, 28, 32, 0.685), rgba(23, 23, 27, 0.7) ), url('../assets/images/home2.png');
     background-size:cover;
     position:relative;
     background-position: center;
@@ -45,20 +46,47 @@ html{
     color: white;
 }
 .hero_title {
-    font-size: 4.5rem; 
+    font-size: 18pt;
+    line-height: 20pt;
     font-family: Walkway_Black;
 }
 
-.hero_desc {
-    font-size: 2rem;
-    
+.color {
+    color: #5EC8FA;
+}
+
+@media screen and (min-width: 600px){
+    .hero_title {
+    font-size: 32pt;
+    line-height: 36pt;
+    }
+    .typewrite {
+    font-size: 28pt;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .sobreMi {
+    font-size: 12pt;
+    line-height: 11pt;
+    }
+}
+
+.write {
+    font-size: 14pt; 
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    font-family: monospace;
+    animation: 
+    blink-caret .75s step-end infinite;
 }
 /* DEMO-SPECIFIC STYLES */
 .typewrite {
-    font-size: 2rem; 
+    font-size: 14pt; 
     text-align: center;
     margin: 0 auto;
-    color: white;
+    color: #5EC8FA;
     font-family: monospace;
     animation: 
     blink-caret .75s step-end infinite;
@@ -94,8 +122,20 @@ a {
 }
 /* display background color black on navbar scroll */
 .navbarScroll.navbarDark {
-    background-color: #1C2533;
+    background-color: #1C2533; 
     border-bottom: 3px solid #4195BF;
+}
+.navbar-nav .nav-link {
+    font-size: 12pt;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.navbar-toggler:focus {
+    box-shadow: none!important;
+}
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,.55);
+    border: none;
 }
 /* social media icons styling */
 .social-icons {
@@ -130,7 +170,6 @@ a {
 }
 .card-btn2 {
     color: #1f3d47;
-    background: #8fabba;
     padding: 10px 10px;
     border-radius: 5px;
     justify-content: center;
@@ -228,7 +267,7 @@ footer .footnote {
     justify-content: center;
 }
 .highlight {
-    color: #28fabb;
+    color: #5EC8FA;
 }
 
 .header {
@@ -605,38 +644,74 @@ section .flex-50-gt-sm {
 }
 .card-btn {
     display: flex;
-    /* color: #1f3d47;
-    background: #8fabba; */
-    /* padding: 10px 20px; */
     width: 225px;
     text-transform: capitalize;
-    /* border: none; */
-    /* outline: none; */
     justify-content: space-between;
     font-weight: 500;
-    /* cursor: pointer; */
     margin: 0 auto;
 }
-.boton {
+/* botones */
+.boton2 {
+    position: relative;
+    display: block;
     width: 100px;
     line-height: 2.5;
     text-align: center;
-    color: #28fabb;
-    background: #0a2427;
-    border-radius: 5px;
+    color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #4593b8;
     outline: none;
     cursor: pointer;
-    border: 2px #28fabb;
+    transition: all 500ms ease;
+    border: 2px solid #4593b8; 
 }
+
+.boton2:hover {
+    color: #fff;
+    background-color: #5bafd6;
+    border-color: #5bafd6;
+}
+
+.boton {
+    position: relative;
+    display: block;
+    width: 100px;
+    line-height: 2.5;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    transition: all 500ms ease;
+    border: 2px solid #5EC8FA; 
+}
+
+
 .boton:hover {
     color: #fff;
-    background-color: #1f3d47;
-    border-color: #8fabba;
+    background-color: #4593b8;
+    border-color: #4593b8;
 }
+
+
+
 .card:hover .card-body2{
     right: 0;
 }
 
+@media (min-width: 300px){
+    .card-btn {
+        justify-content: center;
+        gap: 40px;
+    }
+}
+@media screen and (min-width: 300px){
+    section:nth-of-type(2) .bar span {
+    display: initial;
+    }
+}
 /* grande */
 @media (min-width: 576px){
     .card-body2 .card-title{
@@ -646,45 +721,57 @@ section .flex-50-gt-sm {
         margin-bottom: 8vw;
     }
     .card-body2 p{
-        font-size: 1em;
+        font-size: 1.5em;
+    }
+    .boton {
+        font-size: 1.3em;
+    }
+    .card-btn {
+        justify-content: center;
+        gap: 40px;
     }
 }
 
 /* mediana */
 @media (min-width: 768px){
     .card-body2 .card-title{
-    font-size: 2.5em;
+    font-size: 3em;
     }
     .card-body2 p{
-    font-size: 1.5em;
+    font-size: 2em;
     }
     .card-body2 span{
     margin-bottom: 10vw;
+    font-size: 1.7em;
+    }
+    .boton {
+    font-size: 1.5em;
     }
 }
 /* mini */
 @media (min-width: 992px){
     .card-body2 .card-title{
-    font-size: 1em;
-    margin-block-end: 2%;
-    
+    font-size: 9pt;
+    margin-block-end: 1%;
     }
     .card-body2 span{
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    font-size: 7pt;
     }
     .card-body2 .card-text{
-     font-size: 15px;
+     font-size: 8pt;
+     margin-top: 10px;
     } 
 }
 @media (min-width: 1100px){
     .card-body2 .card-title{
-    font-size: 1em;
+    font-size: 12pt;
     padding-top: 5px;
     margin-block-end: 2%;
-    
     }
     .card-body2 span{
-         margin-bottom: 40px;
+    margin-bottom: 40px;
+    font-size: 8pt;
     }
     .card-body2 .card-text{
         margin-block-start: 0%;
